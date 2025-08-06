@@ -1,0 +1,27 @@
+package com.example.base_app.viewmodel
+
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+
+import com.example.base_app.model.UserData
+import com.example.base_app.model.UserRepository
+import kotlinx.coroutines.launch
+
+class HomeViewModel: ViewModel() {
+    val userRepository : UserRepository = UserRepository()
+    private  val _userData = MutableLiveData<UserData>()
+    val userData : LiveData<UserData> = _userData
+    fun getUserData(){
+
+        viewModelScope.launch {
+            val userResult = userRepository.fetchUserData()
+            _userData.postValue(userResult)
+        }
+
+
+
+    }
+
+}
