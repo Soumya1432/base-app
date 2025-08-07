@@ -26,7 +26,7 @@ fun ClassScheduleCard(schedule: ClassSchedule){
         shadowElevation = 4.dp,
         modifier = Modifier.fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 8.dp)
-            .height(48.dp)
+            .height(64.dp)
         ) {
         Row(modifier = Modifier.fillMaxSize().padding(horizontal = 16.dp),
               verticalAlignment = Alignment.CenterVertically,
