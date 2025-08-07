@@ -1,7 +1,6 @@
 package com.example.base_app.layout
 
 
-
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -45,16 +44,13 @@ fun DrawerContent(
             contentDescription = "Event Image",
             modifier = Modifier.fillMaxWidth().height(100.dp).clip(RoundedCornerShape(8.dp))
         )
-
         DrawerItem("My Profile",Icons.Default.Person,"profile",onDestinationClick)
         DrawerItem("Manage Notification",Icons.Default.Notifications,"managenotification",onDestinationClick)
         DrawerItem("Fees",Icons.Default.Refresh,"profile",onDestinationClick)
         DrawerItem("Settings",Icons.Default.Settings,"profile",onDestinationClick)
         DrawerItem("Support",Icons.Default.Info,"support",onDestinationClick)
         DrawerItem("Logout",Icons.Default.ExitToApp,"profile",onDestinationClick)
-
     }
-
 }
 
 @Composable
@@ -67,9 +63,7 @@ fun DrawerItem(
     Row(
         modifier = Modifier.fillMaxWidth().clickable { onClick(route) }.padding(12.dp),
         horizontalArrangement = Arrangement.Start
-
     ) {
-
         Icon(imageVector = icon, contentDescription = label)
         Spacer(modifier = Modifier.width(16.dp))
         Text(text = label)
