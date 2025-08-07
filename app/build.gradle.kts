@@ -37,6 +37,13 @@ android {
     buildFeatures {
         compose = true
     }
+    sourceSets {
+        getByName("main") {
+            assets {
+                srcDirs("src\\main\\assets", "src\\main\\assets")
+            }
+        }
+    }
 }
 
 dependencies {
@@ -57,4 +64,14 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+
+    val nav_version = "2.9.2"
+
+    implementation("androidx.navigation:navigation-compose:$nav_version")
+
+    implementation("androidx.compose.ui:ui:1.6.0")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 }
