@@ -46,7 +46,6 @@ fun DrawerWrapperLayout(
     ) {
         // Pass `onMenuClick` down to BaseLayout -> Footer
         BaseLayout(
-
             navController = navController,
             onMenuClick = { scope.launch { drawerState.open() } }
         ) {

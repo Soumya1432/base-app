@@ -30,15 +30,33 @@ fun HomePage(navController: NavController)
 {
 
    val items= listOf(
-       HomeCardItem(R.drawable.classschedule,"Class Schedule") { },
-       HomeCardItem(R.drawable.attendance,"Attendance") { },
-       HomeCardItem(R.drawable.performance,"Performance Tracking") { },
-       HomeCardItem(R.drawable.achievements,"Achievements") { },
-       HomeCardItem(R.drawable.homework,"HomeWork") { },
-       HomeCardItem(R.drawable.beltgrade,"Belt Grade Reports") { },
-       HomeCardItem(R.drawable.fees,"Fees") { },
-       HomeCardItem(R.drawable.events,"Events") { },
-       HomeCardItem(R.drawable.notification,"Notification") { },
+       HomeCardItem(R.drawable.classschedule,"Class Schedule") {
+           navController.navigate("schedule")
+       },
+       HomeCardItem(R.drawable.attendance,"Attendance") {
+           navController.navigate("attendance")
+       },
+       HomeCardItem(R.drawable.performance,"Performance Tracking") {
+           navController.navigate("performance")
+       },
+       HomeCardItem(R.drawable.achievements,"Achievements") {
+           navController.navigate("achievements")
+       },
+       HomeCardItem(R.drawable.homework,"HomeWork") {
+           navController.navigate("homework")
+       },
+       HomeCardItem(R.drawable.beltgrade,"Belt Grade Reports") {
+           navController.navigate("beltgrade")
+       },
+       HomeCardItem(R.drawable.fees,"Fees") {
+           navController.navigate("fees")
+       },
+       HomeCardItem(R.drawable.events,"Events") {
+           navController.navigate("events")
+       },
+       HomeCardItem(R.drawable.notification,"Notification") {
+           navController.navigate("notification")
+       },
    )
     LazyVerticalGrid(
         columns = GridCells.Fixed(3),
