@@ -14,14 +14,14 @@ import com.example.base_app.dataclass.EventCardDetails
 fun EventsPage(navController: NavController){
   val eventList = listOf(
       EventCardDetails(
-          imageRes = R.drawable.classoff,
+          imageRes = R.drawable.hostevent,
           title = "Championship",
           date = "2025-08-12",
           placeName = "National Stadium",
           description = "It used dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem..."
       ),
       EventCardDetails(
-          imageRes = R.drawable.classoff,
+          imageRes = R.drawable.hostevent,
           title = "Championship",
           date = "2025-08-12",
           placeName = "National Stadium",

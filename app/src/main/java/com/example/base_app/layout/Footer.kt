@@ -29,9 +29,13 @@ fun Footer(navController: NavController, onMenuClick: ()-> Unit) {
         horizontalArrangement = Arrangement.SpaceEvenly,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        FooterItem(R.drawable.home, "Home") { /* navController.navigate(...) */ }
+        FooterItem(R.drawable.home, "Home") {
+            navController.navigate("home")
+        }
         FooterItem(R.drawable.search, "Search") { /* navController.navigate(...) */ }
-        FooterItem(R.drawable.category, "Category") { /* navController.navigate(...) */ }
+        FooterItem(R.drawable.category, "Category") {
+            navController.navigate("category")
+        }
         FooterItem(R.drawable.account, "Account") { /* navController.navigate(...) */ }
     }
 

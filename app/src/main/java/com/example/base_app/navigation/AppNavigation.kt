@@ -9,6 +9,7 @@ import com.example.base_app.layout.DrawerWrapperLayout
 import com.example.base_app.screen.AchievementsScreen
 import com.example.base_app.screen.AttendanceScreen
 import com.example.base_app.screen.BeltGradeScreen
+import com.example.base_app.screen.CategoryScreen
 import com.example.base_app.screen.ClassScheduleScreen
 import com.example.base_app.screen.EventsScreen
 import com.example.base_app.screen.FeesScreen
@@ -81,6 +82,12 @@ fun AppNavigation() {
                 NotificationScreen(navController)
             }
         }
+        composable("category") {
+            DrawerWrapperLayout(navController = navController) {
+                CategoryScreen(navController)
+            }
+        }
+
     }
 }
 
