@@ -89,7 +89,7 @@ fun LoginCard(navController: NavController){
                 text = "Forgot Password?",
                 color = Color(0xFF6200EE),
                 modifier = Modifier.clickable {
-                    // Navigate to Forgot Password Screen or perform action
+                    navController.navigate("forgot-password")
                 }
             )
         }

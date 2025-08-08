@@ -20,6 +20,7 @@ import com.example.base_app.screen.HomeWorkScreen
 import com.example.base_app.screen.NotificationScreen
 import com.example.base_app.screen.PerformanceTrackingScreen
 import com.example.base_app.screen.SplashScreen
+import com.example.base_app.screen.auth.ForgotPasswordScreen
 import com.example.base_app.screen.auth.LoginScreen
 import com.example.base_app.screen.auth.SignupScreen
 import com.example.base_app.view.accounts.ChangePasswordPage
@@ -31,7 +32,7 @@ import com.example.base_app.view.accounts.TermsConditionPage
 @Composable
 fun AppNavigation() {
     var navController = rememberNavController()
-    NavHost(navController = navController, startDestination = "splash") {
+    NavHost(navController = navController, startDestination = "account") {
 
         composable("splash") {
             SplashScreen(navController)
@@ -42,6 +43,9 @@ fun AppNavigation() {
         }
         composable("signup") {
             SignupScreen(navController)
+        }
+        composable("forgot-password") {
+            ForgotPasswordScreen(navController)
         }
 
 
@@ -114,7 +118,7 @@ fun AppNavigation() {
 
         composable("profile") {
             AccountWrapperLayout(navController = navController) {
-                MyProfilePage()
+                MyProfilePage(navController)
             }
         }
         composable("guardian-profile") {

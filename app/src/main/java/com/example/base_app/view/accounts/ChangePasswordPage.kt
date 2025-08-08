@@ -103,13 +103,13 @@ fun ChangePasswordPage(navController: NavController) {
             )
             Spacer(modifier = Modifier.weight(1f))
             Button(
-                onClick = { /* Handle button click */ },
-                modifier = Modifier.fillMaxWidth().padding(12.dp),
+                onClick = { "" },
+                modifier = Modifier.fillMaxWidth().size(48.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFE53935)),
                 shape = RoundedCornerShape(50),
 
-            ) {
-                Text(text = "Save Password", color = Color.White)
+                ) {
+                Text(text = "Change Password", color = Color.White)
             }
         }
     }
