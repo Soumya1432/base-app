@@ -126,9 +126,9 @@ fun SplashScreen(navController: NavController) {
     val coroutineScope = rememberCoroutineScope()
 
     val splashItems = listOf(
+        R.drawable.karate1,
         R.drawable.kidskarate,
-        R.drawable.kidskarate,
-        R.drawable.kidskarate
+        R.drawable.adultskarate
     )
 
     // Root container — don't add navigationBarsPadding here
@@ -203,7 +203,7 @@ fun SplashScreen(navController: NavController) {
                                 pagerState.animateScrollToPage(pagerState.currentPage + 1)
                             }
                         } else {
-                           navController.navigate("home")
+                           navController.navigate("login")
                         }
                     },
                     shape = RoundedCornerShape(50),

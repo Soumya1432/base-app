@@ -31,7 +31,8 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 
 @Composable
-fun LoginCard(navController: NavController){
+fun SignupCard(navController: NavController){
+    var fullName by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var newPassword by remember { mutableStateOf("") }
     var newPasswordVisible by remember { mutableStateOf(false) }
@@ -45,12 +46,20 @@ fun LoginCard(navController: NavController){
     ) {
         OutlinedTextField(
             modifier = Modifier.fillMaxWidth(),
+            value = fullName,
+            onValueChange = { fullName=it},
+            label = { Text("Full Name", color = Color.Black) },
+            textStyle = TextStyle(color = Color.Black, fontWeight = FontWeight.SemiBold),
+            singleLine = true
+        )
+        OutlinedTextField(
+            modifier = Modifier.fillMaxWidth(),
             value = email,
             onValueChange = { email=it},
             label = { Text("Email", color = Color.Black) },
             textStyle = TextStyle(color = Color.Black, fontWeight = FontWeight.SemiBold),
             singleLine = true
-            )
+        )
         PasswordField(
             label = "New Password",
             password = newPassword,
@@ -99,29 +108,29 @@ fun LoginCard(navController: NavController){
             horizontalArrangement = Arrangement.Center
         ) {
             Text(
-                text = "Don't have an account?",
+                text = "have an account?",
                 color = Color.Black,
             )
 
             Text(
-                text = "Signup now",
+                text = "Login now",
                 textDecoration = TextDecoration.Underline,
                 color = Color(0xFF6200EE),
                 modifier = Modifier.clickable {
-                  navController.navigate("signup")
+                    navController.navigate("login")
                 }
             )
         }
 
         Spacer(modifier = Modifier.weight(1f))
         Button(
-            onClick = { navController.navigate("home") },
+            onClick = { navController.navigate("login") },
             modifier = Modifier.fillMaxWidth().size(48.dp),
             colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFE53935)),
             shape = RoundedCornerShape(50),
 
             ) {
-            Text(text = "Login", color = Color.White)
+            Text(text = "Signup", color = Color.White)
         }
     }
 }

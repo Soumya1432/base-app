@@ -20,6 +20,8 @@ import com.example.base_app.screen.HomeWorkScreen
 import com.example.base_app.screen.NotificationScreen
 import com.example.base_app.screen.PerformanceTrackingScreen
 import com.example.base_app.screen.SplashScreen
+import com.example.base_app.screen.auth.LoginScreen
+import com.example.base_app.screen.auth.SignupScreen
 import com.example.base_app.view.accounts.ChangePasswordPage
 import com.example.base_app.view.accounts.GuardianProfilePage
 import com.example.base_app.view.accounts.ManageNotificationPage
@@ -34,6 +36,14 @@ fun AppNavigation() {
         composable("splash") {
             SplashScreen(navController)
         }
+
+        composable("login") {
+            LoginScreen(navController)
+        }
+        composable("signup") {
+            SignupScreen(navController)
+        }
+
 
         composable("home") {
             DrawerWrapperLayout(navController = navController) {
