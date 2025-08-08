@@ -76,46 +76,6 @@ fun HomePage(navController: NavController)
         }
     }
 
-
-//    LazyColumn(modifier = Modifier.padding(16.dp),
-//
-//        ) {
-//        item {
-//            Row(
-//                horizontalArrangement = Arrangement.SpaceEvenly,
-//                verticalAlignment = Alignment.CenterVertically
-//            ){
-//               // FooterItem(R.drawable.home, "Home") { /* navController.navigate(...) */ }
-//                HomeCard(R.drawable.classschedule,"Class Schedule") { }
-//                HomeCard(R.drawable.attendance,"Attendance") { }
-//                HomeCard(R.drawable.performance,"Performance Tracking") { }
-//            }
-//            Row(
-//                horizontalArrangement = Arrangement.SpaceEvenly,
-//                verticalAlignment = Alignment.CenterVertically
-//            ){
-//                HomeCard(R.drawable.achievements,"Achievements") { }
-//                HomeCard(R.drawable.homework,"HomeWork") { }
-//                HomeCard(R.drawable.beltgrade,"Belt Grade Reports") { }
-//            }
-//            Row(
-//                horizontalArrangement = Arrangement.SpaceEvenly,
-//                verticalAlignment = Alignment.CenterVertically
-//            ){
-//                HomeCard(R.drawable.fees,"Fees") { }
-//                HomeCard(R.drawable.events,"HomeWork") { }
-//                HomeCard(R.drawable.notification,"Notification") { }
-//            }
-//        }
-//    }
-
-
-
-
-
-
-
-
 //    val userData  = viewModel.userData.observeAsState()
 //    val isLoading = viewModel.isLoading.observeAsState()
 

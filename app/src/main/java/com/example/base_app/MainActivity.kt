@@ -26,31 +26,22 @@ import com.example.base_app.viewmodel.HomeViewModel
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         enableEdgeToEdge()
-
         val homeViewModel = ViewModelProvider(this)[HomeViewModel::class]
         setContent {
             BaseappTheme {
-
-                  //  HomePage(modifier = Modifier.padding(innerPadding), homeViewModel)
-
                 SetStatusBarColor(Color.White)
-
                     AppNavigation()
-
             }
         }
     }
 }
-
 @Composable
 fun SetStatusBarColor(color: Color) {
     val view = LocalView.current
     SideEffect {
         val window = (view.context as ComponentActivity).window
         window.statusBarColor = color.toArgb()
-
         // Set dark icons for light background
         val insetsController = WindowInsetsControllerCompat(window, view)
         insetsController.isAppearanceLightStatusBars = true

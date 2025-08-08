@@ -61,7 +61,6 @@ fun EventCard(
                     .background(Color.White, shape = RoundedCornerShape(4.dp))
             )
 //            description
-
             Text(
                 text = event.description,
                 modifier = Modifier.padding(12.dp),

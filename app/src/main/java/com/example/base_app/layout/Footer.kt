@@ -36,12 +36,12 @@ fun Footer(navController: NavController, onMenuClick: ()-> Unit) {
         FooterItem(R.drawable.category, "Category") {
             navController.navigate("category")
         }
-        FooterItem(R.drawable.account, "Account") { /* navController.navigate(...) */ }
+        FooterItem(R.drawable.account, "Account") {
+            navController.navigate("account")
+        }
     }
 
     }
-
-
 
 @Composable
 fun FooterItem(iconRes: Int, label: String, onClick: () -> Unit) {

@@ -15,7 +15,6 @@ class HomeViewModel: ViewModel() {
     val userData : LiveData<UserData> = _userData
     private val _isLoading = MutableLiveData<Boolean>(false)
     val isLoading : LiveData<Boolean> = _isLoading
-    
     fun getUserData(){
         _isLoading.postValue(true)
         viewModelScope.launch {
@@ -23,9 +22,6 @@ class HomeViewModel: ViewModel() {
             _userData.postValue(userResult)
             _isLoading.postValue(false)
         }
-
-
-
     }
 
 }

@@ -20,7 +20,6 @@ import com.example.base_app.dataclass.ClassAttendance
 fun ClassAttendance(attendance: ClassAttendance){
     val statusColor = if(attendance.isPresent) Color.Green else Color.Red
     val statusIcons = if(attendance.isPresent) Icons.Default.Check else Icons.Default.Close
-
  Card(
      modifier = Modifier
          .fillMaxWidth()

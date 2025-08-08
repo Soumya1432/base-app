@@ -35,7 +35,6 @@ import com.example.base_app.R
 @Composable
 fun AchievementsPage(navController: NavController){
     Card(
-      //  shape = RoundedCornerShape(12.dp),
         modifier = Modifier.fillMaxWidth().padding(12.dp),
         colors = CardDefaults.cardColors(containerColor = Color.Transparent),
 //        elevation = CardDefaults.cardElevation(6.dp)
@@ -49,16 +48,13 @@ fun AchievementsPage(navController: NavController){
                 contentDescription = "Event Image",
                 modifier = Modifier.fillMaxWidth().height(200.dp).clip(RoundedCornerShape(8.dp))
             )
-
             Spacer(
                 modifier = Modifier
                     .fillMaxWidth(0.3f)
                     .height(6.dp)
                     .padding(start = 8.dp, top = 6.dp)
-
             )
 //            description
-
             Text(
                 text ="You have no achievements",
                 modifier = Modifier.padding(12.dp),
@@ -67,8 +63,6 @@ fun AchievementsPage(navController: NavController){
                 lineHeight = 18.sp,
                 color = Color.DarkGray
             )
-
-
             }
         }
 }

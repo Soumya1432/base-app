@@ -29,15 +29,12 @@ fun ClassSchedulePage(navController: NavController){
         ClassSchedule("Sat", "Room 106", "03:00 PM"),
         ClassSchedule("Sun", "Room 107", "04:00 PM"),
         ClassSchedule("Mon", "Room 108", "05:00 PM"),
-
     )
-
     LazyColumn (modifier = Modifier.padding(top = 8.dp)) {
         items(scheduleList) { schedule ->
             ClassScheduleCard(schedule = schedule)
         }
     }
-
     Spacer(modifier = Modifier.height(16.dp))
     Column(modifier = Modifier.padding(8.dp)) {
             Image(painter = painterResource(id= com.example.base_app.R.drawable.classoff),
@@ -47,8 +44,6 @@ fun ClassSchedulePage(navController: NavController){
                     .height(200.dp)
                     .padding(bottom = 16.dp)
             )
-
-
     }
 
 }

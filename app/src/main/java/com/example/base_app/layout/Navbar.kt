@@ -98,7 +98,6 @@ fun Navbar(navController: NavController){
             value = searchQuery,
             onValueChange = {
                 searchQuery = it
-
             },
             placeholder = { Text("Search....") },
             modifier = Modifier
@@ -114,10 +113,7 @@ fun Navbar(navController: NavController){
                 }
             ),
         )
-
-
     }
-
     if(showNotificationDialog){
         Dialog(onDismissRequest = {showNotificationDialog=false}) {
             NotificationBox()

@@ -9,7 +9,6 @@ import androidx.navigation.NavController
 import com.example.base_app.R
 import com.example.base_app.component.EventCard
 import com.example.base_app.dataclass.EventCardDetails
-
 @Composable
 fun EventsPage(navController: NavController){
   val eventList = listOf(
@@ -34,9 +33,7 @@ fun EventsPage(navController: NavController){
           placeName = "National Stadium",
           description = "It used dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem..."
       )
-
   )
-
     LazyColumn {
         items(eventList){ event ->
             EventCard(

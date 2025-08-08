@@ -52,7 +52,6 @@ fun DrawerContent(
         DrawerItem("Logout",Icons.Default.ExitToApp,"profile",onDestinationClick)
     }
 }
-
 @Composable
 fun DrawerItem(
     label:String,

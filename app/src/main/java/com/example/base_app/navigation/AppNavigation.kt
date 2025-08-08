@@ -5,7 +5,9 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.base_app.layout.AccountWrapperLayout
 import com.example.base_app.layout.DrawerWrapperLayout
+import com.example.base_app.screen.AccountScreen
 import com.example.base_app.screen.AchievementsScreen
 import com.example.base_app.screen.AttendanceScreen
 import com.example.base_app.screen.BeltGradeScreen
@@ -17,11 +19,11 @@ import com.example.base_app.screen.HomeScreen
 import com.example.base_app.screen.HomeWorkScreen
 import com.example.base_app.screen.NotificationScreen
 import com.example.base_app.screen.PerformanceTrackingScreen
-import com.example.base_app.view.BeltGradePage
-import com.example.base_app.view.EventsPage
-import com.example.base_app.view.HomePage
-import com.example.base_app.view.HomeWorkPage
-import com.example.base_app.view.NotificationPage
+import com.example.base_app.view.accounts.ChangePasswordPage
+import com.example.base_app.view.accounts.GuardianProfilePage
+import com.example.base_app.view.accounts.ManageNotificationPage
+import com.example.base_app.view.accounts.MyProfilePage
+import com.example.base_app.view.accounts.TermsConditionPage
 
 @Composable
 fun AppNavigation() {
@@ -82,12 +84,44 @@ fun AppNavigation() {
                 NotificationScreen(navController)
             }
         }
+        composable("account") {
+            DrawerWrapperLayout(navController = navController) {
+                AccountScreen(navController)
+            }
+        }
+
         composable("category") {
             DrawerWrapperLayout(navController = navController) {
                 CategoryScreen(navController)
             }
         }
 
+        composable("profile") {
+            AccountWrapperLayout(navController = navController) {
+                MyProfilePage()
+            }
+        }
+        composable("guardian-profile") {
+            AccountWrapperLayout(navController = navController) {
+                GuardianProfilePage()
+            }
+        }
+
+        composable("manage-notification") {
+            AccountWrapperLayout(navController = navController) {
+                ManageNotificationPage()
+            }
+        }
+        composable("change-password") {
+            AccountWrapperLayout(navController = navController) {
+                ChangePasswordPage(navController)
+            }
+        }
+        composable("terms-condition") {
+            AccountWrapperLayout(navController = navController) {
+                TermsConditionPage()
+            }
+        }
     }
 }
 

@@ -22,7 +22,6 @@ fun DrawerWrapperLayout(
 ) {
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     val scope = rememberCoroutineScope()
-
     val screenWidth = LocalConfiguration.current.screenWidthDp.dp
     val drawerWidth: Dp = screenWidth *0.7f
 
@@ -44,7 +43,6 @@ fun DrawerWrapperLayout(
             }
         }
     ) {
-        // Pass `onMenuClick` down to BaseLayout -> Footer
         BaseLayout(
             navController = navController,
             onMenuClick = { scope.launch { drawerState.open() } }
